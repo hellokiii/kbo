@@ -1,0 +1,32 @@
+    <!--address.each do |a|-->
+    <!--  Game.create(full: a[-17,12], -->
+    <!--              month: a[-13, 2], -->
+    <!--              day: a[-11, 2], -->
+    <!--              away_team: a[-9, 2],-->
+    <!--              home_team: a[-7,2])-->
+    <!--end-->
+    
+팀<br>
+롯데 : LT<br>
+한화 : HH<br>
+기아 : HT<br>
+NC : NC<br>
+KT : KT<br>
+삼성 : SS<br>
+두산 : OB<br>
+SK : SK<br>
+넥센 : WO<br>
+LG : LG<br>
+
+    
+<% @address.each do |a| %>
+    <form action="/home/relay" method="post">
+        <button type="submit" name="your_name" value="your_value" class="btn-link">
+            <%= a[-13, 2] %>월
+            <%= a[-11, 2] %>일
+            <%= a[-9, 2] %> vs <%= a[-7,2] %>
+            <input name="full" type="hidden" value="<%=a[-17,12]%>">
+            <input name="month" type="hidden" value="<%=a[-13,2]%>">
+        </button>
+    </form>
+<% end %>

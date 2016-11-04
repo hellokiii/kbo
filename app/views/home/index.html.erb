@@ -1,0 +1,63 @@
+2016시즌<br>
+팀<br>
+롯데 : LT<br>
+한화 : HH<br>
+기아 : HT<br>
+NC : NC<br>
+KT : KT<br>
+삼성 : SS<br>
+두산 : OB<br>
+SK : SK<br>
+넥센 : WO<br>
+LG : LG<br>
+
+
+<!--<form action="/home/relay" method = "POST">-->
+<!--  날짜:<br>-->
+  <!--<input type="text" name="season" placeholder="2016">년-->
+<!--  2016년-->
+<!--  <input type="text" name="month" placeholder="06">월-->
+<!--  <input type="text" name="day" placeholder="25">일<br>-->
+<!--  원정팀:<br>-->
+<!--  <input type="text" name="away_team" placeholder="LT"><br>-->
+<!--  홈팀:<br>-->
+<!--  <input type="text" name="home_team" placeholder="HH">-->
+<!--  <input type="submit" value="Submit">-->
+<!--</form><hr>-->
+
+
+
+
+<form action="/home/schedule" method = "POST">
+  <select name="month">
+    <% for i in 3..12 %>
+      <option value="<%='%02d'%i %>"><%=i%>월</option>
+    <% end %>
+  </select>
+  <input type="submit" value="Submit">
+</form><hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<a href="/home/show">6월 LG 홈경기 다 보기</a>-->
+
+<!--<a href="/home/schedule">6월 다 보기</a>-->
+
+<!--<form action="/home/season2016" method = "POST">-->
+<!--  <input type="submit" value="올 시즌 다 보기">-->
+<!--</form>-->
